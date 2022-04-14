@@ -4,8 +4,8 @@ while email != "":
     prefix = email.split('@')[0]
     parts = prefix.split('.')
     name = " ".join(parts).title()
-    confirmation = input("Is your name {}? (Y/n) ".format(name))
-    if confirmation.upper() != "Y" and confirmation != "":
+    answer = input(f"Is your name {name}? (Y/n) ")
+    if answer.upper() != "Y" and answer != "":
         name = input("Name: ")
     email_to_name[email] = name
     email = input("Email: ")
